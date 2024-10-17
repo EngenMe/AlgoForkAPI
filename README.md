@@ -32,3 +32,7 @@
 
 <br />
 
+# About
+
+AlgoForkAPI is the backend for the AlgoFork platform, managing coding challenges, user data, and interactions with the frontend. Built with Node.js and Express, it handles problem-solving tasks, user authentication, and provides a seamless experience for users, ensuring efficient data processing and platform functionality.
+
