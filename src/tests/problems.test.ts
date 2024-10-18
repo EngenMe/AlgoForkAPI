@@ -1,9 +1,9 @@
 import bcrypt from 'bcrypt';
 import mongoose from 'mongoose';
 import request from 'supertest';
-import App from '../app';
-import { CreateProblemDto } from '../dtos/problems.dto';
-import ProblemsRoute from '../routes/problems.route';
+import App from '@/app';
+import { CreateProblemDto } from '@/dtos/problems.dto';
+import ProblemsRoute from '@/routes/problems.route';
 
 beforeAll(async () => {
   jest.setTimeout(10000);
