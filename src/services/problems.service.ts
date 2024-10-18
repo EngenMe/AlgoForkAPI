@@ -1,4 +1,3 @@
-import { hash } from 'bcrypt';
 import { CreateProblemDto } from '@dtos/problems.dto';
 import { HttpException } from '@exceptions/HttpException';
 import { Problem } from '@interfaces/problems.interface';
