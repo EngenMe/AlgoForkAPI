@@ -5,53 +5,54 @@ const problemSchema: Schema = new Schema({
   title: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   description: {
     type: String,
-    required: true
+    required: true,
   },
   difficulty: {
     type: String,
     enum: ['Easy', 'Medium', 'Hard'],
-    required: true
+    required: true,
   },
   tags: {
     type: [String],
-    default: []
+    default: [],
   },
   inputFormat: {
     type: String,
-    required: true
+    required: true,
   },
   outputFormat: {
     type: String,
-    required: true
+    required: true,
   },
   examples: [
     {
       input: {
         type: String,
-        required: true
+        required: true,
       },
       output: {
         type: String,
-        required: true
-      }
-    }
+        required: true,
+      },
+      _id: false,
+    },
   ],
   constraints: {
     type: String,
-    required: true
+    required: true,
   },
   solution: {
-    type: String, 
-    default: ''
+    type: String,
+    default: '',
   },
   createdAt: {
     type: Date,
-    default: Date.now
-  }
+    default: Date.now,
+  },
 });
 
 const problemModel = model<Problem & Document>('Problem', problemSchema);
