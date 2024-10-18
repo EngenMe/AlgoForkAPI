@@ -16,7 +16,7 @@ class ProblemService {
   public async findProblemById(problemId: string): Promise<Problem> {
     if (isEmpty(problemId)) throw new HttpException(400, 'ProblemId is empty');
 
-    const findProblem: Problem = await this.problems.findOne({ _id: problemId });
+    const findProblem: Problem = await this.problems.findById(problemId);
     if (!findProblem) throw new HttpException(409, "Problem doesn't exist");
 
     return findProblem;
